@@ -1,0 +1,59 @@
+TTS Rails Basic Assessment Homework
+
+- In the command prompt:
+    - What command do you type to use ActiveRecord calls in the rails console? rails c
+        - How do you exit the rails console?  exit
+    - What is the command used in the terminal to create a new rails app (ex. I want to create an app call my_app)? rails new app_name
+    - How do you start the local rails server from the command prompt? rails s
+    - How do you stop the rails server from running? control + c
+    - How do you generate:
+        - A model called Post with attributes username, email, and entry? rails g model Post username:datatype email:datatype entry:datatype
+        - A controller Products with index and about pages? rails g Products index about
+        - A model, view, and controller called Vehicle with parameters name, price, and category? rails g scaffold Vehicle name:datatype price:datatype category:datatype
+    - How do you add fields (columns) to a table that already exists (i.e., I want to add the field year to my Vehicle table)? rails g migration AddYearToVehicle year:datatype
+    - What command must be run after creating or modifying a table (i.e., after adding a new column)? rails db:migrate
+    - How do you undo a generated resource? rails d ...resource
+    - How do you undo a migration? rails db:rollback
+    - How do you delete all the records in your databases from the command prompt? Resource.destroy_all or rails db:reset
+- In the rails app:
+    - What are the subdirectories contained in the ‘app’ directory?
+        - assets
+        - channels (not sure)
+        - controllers (the brains)
+        - helpers
+        - jobs
+        - mailers
+        - models
+        - uploaders
+        - views
+    - In what directory do we find our “routes.rb” file? config
+    - What is the name of the controller that “controls” our entire application? application_controller.rb
+    - What is the name of the view that allows us to show content on all the views of our application? application.html.erb
+    - What is the purpose of the “<%= yield %> in the application.html.erb? that is where the data is input from the other views
+    - That does the “.erb” extension mean? embedded ruby
+    - How do we print content to the screen in rails? <%= content %>
+    - How does data move from our database to the client area (screen)? model > controller > views > controller > client
+    - What is a Ruby Gem? Importable code
+    - What command must be run in the terminal after modifying the Gemfile.rb? bundle
+    - Where are ActiveRecord statements usually found? inside the controller (fyi - resource, model and database are the same thing)
+    - What does it mean to “render”? insert viewable html and code through partials
+- Associations
+    - How many database tables are needed for a many-to-many association? 3 tables
+        - What is that additional table called? the Join Table
+    - What files state our association declarations?  models
+- Gems
+    - What are the steps for adding Bootstrap to a rails app (include file names and commands in terminal)?
+        - add gem 'bootstrap-sass' to gemfile
+        - in terminal - bundle / bundle install
+        - in javascript application.js, add
+            - //= require jquery
+            - //= require jquery_ujs
+            - //= require bootstrap-sprockets
+        - in application.css, rename application.css to application.scss
+        - still in application.scss, add
+            - @import 'bootstrap-sprockets';
+            - @import 'bootstrap';
+    - What are the steps for adding Devise to a rails app? 1-add gem "devise" to gemfile, 2-bundle 2- rails g devise:install, rails g devise User, rails db:migrate, rails g devise:views
+        - What is the command need to gain access to the views used by Devise? rails g devise:views
+        - What is the model used by Devise to store user information? user.rb / class User
+        - What controller is used to interact with the Devise model? application_controller
