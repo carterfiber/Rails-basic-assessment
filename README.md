@@ -53,7 +53,7 @@ TTS Rails Basic Assessment Homework
         - still in application.scss, add
             - @import 'bootstrap-sprockets';
             - @import 'bootstrap';
-    - What are the steps for adding Devise to a rails app? 1-add gem "devise" to gemfile, 2-bundle 2- rails g devise:install, rails g devise User, rails db:migrate, rails g devise:views
+    - What are the steps for adding Devise to a rails app? 1-add gem "devise" to gemfile, 2-bundle 3- rails g devise:install, rails g devise User, rails db:migrate, rails g devise:views
         - What is the command need to gain access to the views used by Devise? rails g devise:views
         - What is the model used by Devise to store user information? user.rb / class User
         - What controller is used to interact with the Devise model? application_controller
